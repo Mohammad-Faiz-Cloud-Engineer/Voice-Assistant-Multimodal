@@ -36,6 +36,7 @@ env/
 
 # IDE
 .vscode/
+.vscode/settings.json
 .idea/
 *.swp
 *.swo
@@ -61,10 +62,14 @@ recorded_video.avi
 
 # Logs
 *.log
+*.tmp
+*.pid
 logs/
 
 # Model Cache
 .cache/
+coverage/
+.nyc_output/
 models/
 
 # OS
