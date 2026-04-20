@@ -45,11 +45,14 @@ A multimodal AI voice assistant with speech recognition, text-to-speech, compute
    ```
 
 5. Edit `.env` with your configuration
+   - Set `ARDUINO_PORT` only if you want servo control enabled
+   - Keep `LM_STUDIO_BASE_URL` on a trusted local or private endpoint
+   - Adjust `OUTPUT_DIR` and `TEMP_DIR` if you need non-default storage paths
 
 ## Usage
 
 ```bash
-python voice_assistant_multimodal.py
+python3 voice_assistant_multimodal.py
 ```
 
 ### Voice Commands
@@ -66,15 +69,16 @@ python voice_assistant_multimodal.py
 All configuration is managed through environment variables in `.env`:
 
 - `LM_STUDIO_BASE_URL`: LM Studio API endpoint
-- `ARDUINO_PORT`: Serial port for Arduino (e.g., COM3, /dev/ttyUSB0)
+- `ARDUINO_PORT`: Optional serial port for Arduino (e.g., COM3, /dev/ttyUSB0)
 - `CAMERA_INDEX`: Camera device index (usually 0)
 - `WHISPER_MODEL`: Whisper model size (tiny, base, small, medium, large)
+- `OUTPUT_DIR` / `TEMP_DIR`: Writable directories for generated media files
 
 ## Security Notes
 
 - Never commit `.env` file to version control
 - Use HTTPS for production API endpoints
-- Validate all file paths to prevent path traversal
+- Keep LM Studio bound to trusted interfaces only
 - Run with minimal required permissions
 
 ## License
@@ -87,4 +91,4 @@ Contributions welcome! Please ensure code passes all security and quality checks
 
 ---
 
-Made with ❤️ by Mohammad Faiz
+Made by Mohammad Faiz
