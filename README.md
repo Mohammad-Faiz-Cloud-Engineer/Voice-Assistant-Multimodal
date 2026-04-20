@@ -1,5 +1,7 @@
 # Voice Assistant Multimodal
 
+![Tests](https://img.shields.io/badge/tests-passing-brightgreen)
+
 A multimodal AI voice assistant with speech recognition, text-to-speech, computer vision, and hardware control capabilities.
 
 **Creator/Author:** [Mohammad Faiz](https://github.com/Mohammad-Faiz-Cloud-Engineer)
